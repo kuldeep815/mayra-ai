@@ -3,7 +3,7 @@ workflows:
     name: Default Workflow
     instance_type: mac_mini_m2
     environment:
-      flutter: stable
+    - flutter: stable
     scripts:
       - name: Create Android folder
         script: |
@@ -11,4 +11,6 @@ workflows:
       - name: Build APK
         script: |
           flutter build apk --release
-          
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+      
