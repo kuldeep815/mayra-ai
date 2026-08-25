@@ -3,7 +3,7 @@ workflows:
     name: Default Workflow
     instance_type: mac_mini_m2
     environment:
-    - flutter: stable
+      flutter: stable
     scripts:
       - name: Create Android folder
         script: |
